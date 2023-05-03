@@ -1,38 +1,46 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.juego{
+  height: 100vh;
+}
+
+.titulo{
   text-align: center;
+  padding: 10%;
+  font-family: 'Schoolbell', cursive;
+  font-size: 3rem;
+  background-color: orange;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tablero{
+  margin-top: 20%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fila{
+  margin-left: 11%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fila .cuadrado{
+  width: 100px;
+  height: 100px;
+  padding: 8%;
+  font-family: 'Schoolbell', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: blue;
 }
 
-.App-link {
-  color: #61dafb;
+.ganador{
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+  font-size: 2.5rem;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Sigmar', cursive; */
