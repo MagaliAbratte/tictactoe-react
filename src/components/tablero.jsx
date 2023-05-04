@@ -2,10 +2,11 @@ import React from 'react'
 import { Fila } from './fila'
 import { useState } from 'react'
 
-
 export const Tablero = () => {
 
-    const [cuadrado, setCuadrado] = useState(Array(9).fill (null))
+    const valorInicial = Array(9).fill (null)
+
+    const [cuadrado, setCuadrado] = useState(valorInicial)
     const [turno, setTurno] = useState('X')
 
     const handleClick = (i) =>{
@@ -21,9 +22,15 @@ export const Tablero = () => {
 
     const resultado = ganador(cuadrado);
     let status;
+    let restart;
     if (resultado) {
       status = "Ganador: " + resultado;
+      restart = "Volver a empezar"
     } 
+
+    const restartFunc = () => setCuadrado(
+      valorInicial
+    )
     
   return (
     <div className='juego'>
@@ -33,7 +40,11 @@ export const Tablero = () => {
         <Fila cuadrado={cuadrado} handleClick={handleClick} posicion= {[3,4,5]}/>
         <Fila cuadrado={cuadrado} handleClick={handleClick} posicion= {[6,7,8]}/>
         </div>
+
+        <div className='comandos'>
         <h3 className='ganador'>{status}</h3>
+        <button className='restart' onClick={restartFunc}>{restart}</button>
+        </div>
     </div>
   )
 

@@ -11,36 +11,69 @@
 .titulo{
   text-align: center;
   padding: 10%;
-  font-family: 'Schoolbell', cursive;
+  font-family: 'Monoton', cursive;
   font-size: 3rem;
-  background-color: orange;
+  background: linear-gradient(to right, rgba(255, 215, 109, 1) 0%, 15.454545617103577%, rgba(241, 79, 76, 1) 30.909091234207153%, 65.45454561710358%, rgba(169, 132, 202, 1) 100%);
+  color: white;
 }
 
 .tablero{
   margin-top: 20%;
+  display: flex;
+  flex-direction: column;
 }
 
 .fila{
-  margin-left: 11%;
+  margin: 0 auto;
+  max-height: 100px;
 }
 
-.fila .cuadrado{
+.cuadrado{
   width: 100px;
   height: 100px;
-  padding: 8%;
   font-family: 'Schoolbell', cursive;
-  font-size: 2.5rem;
+  font-size: 4.9rem;
   text-align: center;
-  color: blue;
+  color: white;
+  background-color: #A984CA;
+  border: solid 11px white;
+
+} 
+
+.cuadrado:active{
+  color: #FFD76D;
+}
+
+.comandos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .ganador{
   text-align: center;
   font-family: 'Schoolbell', cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 20px;
+}
+
+.restart{
+  text-align: center;
+  font-family: 'Schoolbell', cursive;
+  font-size: 2rem;
+  margin-top: 20px;
+  width: 70%;
+  margin: auto;
+  border: none;
+  color: white;
+  background-color: #F14F4C;
+  border: 0;
+  border-radius: 12px;
 }
 
 /* font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Monoton', cursive;
-font-family: 'Sigmar', cursive; */
+font-family: 'Bangers', cursive;
+font-family: 'Caveat Brush', cursive; */
